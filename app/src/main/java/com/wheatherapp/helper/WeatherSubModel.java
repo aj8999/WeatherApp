@@ -4,7 +4,7 @@ public class WeatherSubModel {
     private static WeatherSubModel weatherSubModel =null;
     public  String currentTime,time,temp,humidity,minTemp,maxTemp,pressure,windSpeed,tempDescription,image;
 
-    public WeatherSubModel(String currentTime, String time, String temp, String humidity, String minTemp, String maxTemp, String pressure, String windSpeed, String tempDescription, String image) {
+    public WeatherSubModel(String currentTime, String time, String temp, String humidity, String minTemp, String maxTemp, String pressure, String windSpeed, String tempDescription) {
         this.currentTime = currentTime;
         this.time = time;
         this.temp = temp;
@@ -15,7 +15,7 @@ public class WeatherSubModel {
         this.windSpeed = windSpeed;
 
         this.tempDescription = tempDescription;
-        this.image = image;
+
     }
 
     public WeatherSubModel() {

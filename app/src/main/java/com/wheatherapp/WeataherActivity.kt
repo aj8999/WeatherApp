@@ -10,7 +10,6 @@ import com.android.volley.toolbox.JsonObjectRequest
 import com.wheatherapp.Adapters.WeatherAdapter
 import com.wheatherapp.databinding.ActivityWeaaherBinding
 import com.wheatherapp.helper.AppController
-import com.wheatherapp.helper.SharedprefrenceManager
 import com.wheatherapp.helper.Weather
 import com.wheatherapp.helper.WeatherSubModel
 import org.json.JSONException
@@ -23,7 +22,7 @@ import java.util.Date
 
 
 class WeataherActivity : AppCompatActivity() {
-    private val sharedPreferenceManager: SharedprefrenceManager? = null
+
     var listitems: ArrayList<Weather> = ArrayList<Weather>()
     var listitems2: ArrayList<Weather> = ArrayList<Weather>()
     var listitems3: ArrayList<Weather> = ArrayList<Weather>()
@@ -207,10 +206,10 @@ class WeataherActivity : AppCompatActivity() {
                             val jsonArray1 = jsonObject.getJSONArray("weather")
                             parseObjectWeather(jsonArray1.getJSONObject(0))?.let { listitems.add(it) }
                           var WEATHER_DESCRIPTION: String? = ""
-                            var WEATHER_ICON: String? = ""
+
                             for (j in listitems.indices) {
                                 WEATHER_DESCRIPTION = listitems[j].description
-                                WEATHER_ICON = listitems[j].icon
+
                             }
 
 
@@ -242,7 +241,6 @@ class WeataherActivity : AppCompatActivity() {
                                     WEATHER_PRESSURE,
                                     WEATHER_WIND_SPEED,
                                     WEATHER_DESCRIPTION,
-                                    WEATHER_ICON
                                 )
                             list.add(weatherSubModel)
 
@@ -296,16 +294,14 @@ class WeataherActivity : AppCompatActivity() {
                                 )
                             }
                             var WEATHER_DESCRIPTION = ""
-                            var WEATHER_ICON = ""
                             for (j in listitems2.indices) {
                                 WEATHER_DESCRIPTION = listitems2[j].description
-                                WEATHER_ICON = listitems2[j].icon
                             }
                             doubleTempSecondDay = java.lang.Float.valueOf(WEATHER_TEMP) - 273.15
                             val stringSecondDayTemp =
                                 String.format("%.2f", doubleTempSecondDay) + " ℃"
                             println("WEATHER_DESCRIPTION:$WEATHER_DESCRIPTION")
-                            println("WEATHER_ICON:$WEATHER_ICON")
+
 
                             // to convert 24 hrs time in 12 hrs time
                             var stringTime = ""
@@ -331,7 +327,6 @@ class WeataherActivity : AppCompatActivity() {
                                     "",
                                     "",
                                     WEATHER_DESCRIPTION,
-                                    WEATHER_ICON
                                 )
                             listitemsTemp.add(weatherSubModel)
                             myAdapter = WeatherAdapter(
@@ -380,10 +375,9 @@ class WeataherActivity : AppCompatActivity() {
                                 )
                             }
                             var WEATHER_DESCRIPTION: String? = ""
-                            var WEATHER_ICON: String? = ""
+
                             for (j in listitems3.indices) {
                                 WEATHER_DESCRIPTION = listitems3[j].description
-                                WEATHER_ICON = listitems3[j].icon
                             }
 
 
@@ -410,7 +404,6 @@ class WeataherActivity : AppCompatActivity() {
                                     "",
                                     "",
                                     WEATHER_DESCRIPTION,
-                                    WEATHER_ICON
                                 )
                             listitemsTempThirdDay.add(weatherSubModel)
                             myAdapter = WeatherAdapter(
@@ -454,10 +447,10 @@ class WeataherActivity : AppCompatActivity() {
                             val stringFourthDayTemp =
                                 String.format("%.2f", doubleFourthDayTemp) + " ℃"
                             var WEATHER_DESCRIPTION: String? = ""
-                            var WEATHER_ICON: String? = ""
+
                             for (j in listitems4.indices) {
                                 WEATHER_DESCRIPTION = listitems4[j].description
-                                WEATHER_ICON = listitems4[j].icon
+
                             }
 
 
@@ -484,7 +477,6 @@ class WeataherActivity : AppCompatActivity() {
                                     "",
                                     "",
                                     WEATHER_DESCRIPTION,
-                                    WEATHER_ICON
                                 )
                             listitemsTempFourthDay.add(weatherSubModel)
                             myAdapter = WeatherAdapter(
@@ -534,7 +526,7 @@ class WeataherActivity : AppCompatActivity() {
                             var WEATHER_ICON: String? = ""
                             for (j in listitems5.indices) {
                                 WEATHER_DESCRIPTION = listitems5[j].description
-                                WEATHER_ICON = listitems5[j].icon
+
                             }
 
 
@@ -561,7 +553,6 @@ class WeataherActivity : AppCompatActivity() {
                                     "",
                                     "",
                                     WEATHER_DESCRIPTION,
-                                    WEATHER_ICON
                                 )
                             listitemsTempFifthDay.add(weatherSubModel)
                             myAdapter = WeatherAdapter(
@@ -596,7 +587,6 @@ class WeataherActivity : AppCompatActivity() {
             weather.id = jsonObject.getString("id")
             weather.main = jsonObject.getString("main")
             weather.description = jsonObject.getString("description")
-            weather.icon = jsonObject.getString("icon")
         } catch (e: JSONException) {
             e.printStackTrace()
         }

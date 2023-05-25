@@ -45,36 +45,36 @@ public class CityAdapter extends RecyclerView.Adapter<CityAdapter.MyViewHolder> 
         AddreesData model = arrayList.get(position);
         holder.tvCity.setText(model.Location);
         db = new AddressDb(context);
-holder.ivDelete.setOnClickListener(new View.OnClickListener() {
-    @Override
-    public void onClick(View v) {
-        new AlertDialog.Builder(context)
-                .setTitle(R.string.app_name)
-                .setMessage(context.getString(R.string.AlertMessage))
-                .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
-                    @Override
-                    public void onClick(DialogInterface dialog, int which) {
-                        Boolean insert=db.delete(model.getId());
-                        if (insert==true){
-                            Toast.makeText(context,"Location Removed Successfully", Toast.LENGTH_SHORT).show();
-                            Intent intent = new Intent(context, HomeScreenActivity.class);
-                            context.startActivity(intent);
-                            ((HomeScreenActivity)context).finish();
-                        }
-                    }
-                })
-                .setNegativeButton("No", null)
-                .show();
+        holder.ivDelete.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                new AlertDialog.Builder(context)
+                        .setTitle(R.string.app_name)
+                        .setMessage(context.getString(R.string.AlertMessage))
+                        .setPositiveButton("Yes", new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                Boolean insert = db.delete(model.getId());
+                                if (insert == true) {
+                                    Toast.makeText(context, "Location Removed Successfully", Toast.LENGTH_SHORT).show();
+                                    Intent intent = new Intent(context, HomeScreenActivity.class);
+                                    context.startActivity(intent);
+                                    ((HomeScreenActivity) context).finish();
+                                }
+                            }
+                        })
+                        .setNegativeButton("No", null)
+                        .show();
 
-    }
-});
+            }
+        });
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(context, WeataherActivity.class);
-                intent.putExtra("LOCATION",model.getLocation());
-                intent.putExtra("LAT",model.getLat());
-                intent.putExtra("LONG",model.getLong());
+                intent.putExtra("LOCATION", model.getLocation());
+                intent.putExtra("LAT", model.getLat());
+                intent.putExtra("LONG", model.getLong());
                 context.startActivity(intent);
             }
         });

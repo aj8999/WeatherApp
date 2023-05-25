@@ -35,8 +35,7 @@ public class SelectMapsActivity extends FragmentActivity implements OnMapReadyCa
 
     Double MapIdleLat, MapIdleLng;
     private static String stringFinalLatitude = "", stringFinalLongitude = "";
-    public static final int PLACE_AUTOCOMPLETE_REQUEST_CODE = 100;
-    // PlaceAutocompleteFragment autocompleteFragment;
+
     String UserAddress = "", CountryName = "", LandMark = "", PostCode = "", StreetRoad = "";
     GPSTracker gps;
     Context context;
@@ -103,7 +102,6 @@ public class SelectMapsActivity extends FragmentActivity implements OnMapReadyCa
         CameraUpdate zoom = CameraUpdateFactory.zoomTo(12.0f);  ///7.0f
         mMap.moveCamera(center);
         mMap.animateCamera(zoom);
-        //  mMap.addMarker(new MarkerOptions().position(latLng).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
 
         Geocoder geocoder1 = new Geocoder(SelectMapsActivity.this);
 
@@ -137,16 +135,10 @@ public class SelectMapsActivity extends FragmentActivity implements OnMapReadyCa
         }
 
 
-        // Enabling MyLocation Layer of Google Map
-        //   this.mMap.setMyLocationEnabled(true);
         googleMap.setOnMapClickListener(new GoogleMap.OnMapClickListener() {
             @Override
             public void onMapClick(LatLng latLng) {
                 mMap.clear();
-                //   mMap.addMarker(new MarkerOptions().position(latLng).icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED)));
-//                mMap.addMarker(new MarkerOptions().position(latLng).title("Custom location").icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_BLUE)));
-//                garageLocation = latLng;
-//                LatLng latLng = mMap.getCameraPosition().target;
                 Geocoder geocoder = new Geocoder(SelectMapsActivity.this);
                 mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(latLng, 12), 2000, null);
 
@@ -227,8 +219,6 @@ public class SelectMapsActivity extends FragmentActivity implements OnMapReadyCa
 
                         try {
                             if (!locality.isEmpty() && !country.isEmpty()) {
-                                //  etAddress.setText(locality + "  " + country);
-
 
                                 stringFinalLatitude = String.valueOf(MapIdleLat);
                                 stringFinalLongitude = String.valueOf(MapIdleLng);

@@ -22,15 +22,9 @@ public class ConnectionDetector {
     public boolean isConnectionAvailable() {
         ConnectivityManager connectivityManager = (ConnectivityManager) context.getSystemService(Context.CONNECTIVITY_SERVICE);
         if (connectivityManager != null) {
-//            NetworkInfo[] networkInfos = connectivityManager.getAllNetworkInfo();
+
             NetworkInfo networkInfos = connectivityManager.getActiveNetworkInfo();
-//            if (networkInfos != null) {
-//                for (NetworkInfo anInfo : networkInfos) {
-//                    if (anInfo.getState() == NetworkInfo.State.CONNECTED) {
-//                        return true;
-//                    }
-//                }
-//            }
+
 
             if (networkInfos != null && networkInfos.isConnectedOrConnecting()) {
                 return true;

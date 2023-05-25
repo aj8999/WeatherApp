@@ -4,33 +4,7 @@ public class Weather
 {
 
     private static Weather weather=null;
-    public  String id,main,description,icon;
-
-
-    public static Weather getWeatherInstance()
-    {
-        if(weather==null)
-        {
-            weather=new Weather();
-        }
-        return weather;
-    }
-
-    public static Weather getWeatherInstance(String id, String main, String description, String icon)
-    {
-        if(weather==null)
-        {
-            weather=new Weather( id,  main,  description,  icon);
-        }
-        return weather;
-    }
-
-    public Weather(String id, String main, String description, String icon) {
-        this.id = id;
-        this.main = main;
-        this.description = description;
-        this.icon = icon;
-    }
+    public  String id,main,description;
 
     public Weather() {
     }
@@ -67,11 +41,4 @@ public class Weather
         this.description = description;
     }
 
-    public String getIcon() {
-        return icon;
-    }
-
-    public void setIcon(String icon) {
-        this.icon = icon;
-    }
 }
