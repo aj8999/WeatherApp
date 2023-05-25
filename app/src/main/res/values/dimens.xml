@@ -1,0 +1,99 @@
+<resources>
+
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">176dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <dimen name="txt_medium">16sp</dimen>
+
+    <dimen name="text_high">16sp</dimen>
+    <dimen name="text_size20">20sp</dimen>
+    <dimen name="text_size40">40sp</dimen>
+    <dimen name="margin20">20dp</dimen>
+    <dimen name="margin40">40dp</dimen>
+    <dimen name="margin10">10dp</dimen>
+    <dimen name="margin150">150dp</dimen>
+
+    <dimen name="txt_size_medium">14sp</dimen>
+    <dimen name="text_large">14sp</dimen>
+    <dimen name="text_extra_large">18sp</dimen>
+    <dimen name="text_big">20sp</dimen>
+    <dimen name="text_extra_big">20sp</dimen>
+
+    <dimen name="margin_very_small">2dp</dimen>
+    <dimen name="margin_small">4dp</dimen>
+    <dimen name="margin_medium">8dp</dimen>
+    <dimen name="margin_medium1">10dp</dimen>
+    <dimen name="txt_size_small">12sp</dimen>
+    <dimen name="margin_large">16dp</dimen>
+    <dimen name="margin_extra_large">18dp</dimen>
+    <dimen name="margin_high">24dp</dimen>
+    <dimen name="margin_higher">36dp</dimen>
+    <dimen name="margin_double_higher">40dp</dimen>
+    <dimen name="margin_extra_double_higher">50dp</dimen>
+
+    <dimen name="margin_big">70dp</dimen>
+    <dimen name="slider_height">315dp</dimen>
+    <dimen name="btn_height_small">35sp</dimen>
+
+
+    <dimen name="txt_size_very_very_small">8sp</dimen>
+    <dimen name="txt_size_very_small">10sp</dimen>
+
+    <!--all padding-->
+    <dimen name="padding_very_small">2dp</dimen>
+    <dimen name="padding_small">4dp</dimen>
+    <dimen name="padding_medium">8dp</dimen>
+    <dimen name="padding_medium_extra">11dp</dimen>
+    <dimen name="padding_large">16dp</dimen>
+    <dimen name="padding_extra_large">32dp</dimen>
+
+
+    <dimen name="app_bar_height">180dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="margin">3dp</dimen>
+
+    <dimen name="margin_meduim">10sp</dimen>
+    <dimen name="margin3">3dp</dimen>
+    <dimen name="weathericon">22dp</dimen>
+    <dimen name="dimen5">5dp</dimen>
+    <dimen name="dimen6">6dp</dimen>
+    <dimen name="dimen30">30dp</dimen>
+    <dimen name="dimen50">50dp</dimen>
+    <dimen name="fab_margin3">3dp</dimen>
+    <dimen name="dimen35">35dp</dimen>
+    <dimen name="margin30">30dp</dimen>
+    <dimen name="dimen200">200dp</dimen>
+    <dimen name="dimen10">10dp</dimen>
+    <dimen name="dimen100">100dp</dimen>
+    <dimen name="dimen_45dp">45dp</dimen>
+    <dimen name="dimen_18dp">18dp</dimen>
+    <dimen name="dimen_25dp">25dp</dimen>
+    <dimen name="dimen_15dp">15dp</dimen>
+    <dimen name="dimen_15sp">15sp</dimen>
+    <dimen name="dimen_28dp">28dp</dimen>
+    <dimen name="dimen_80dp">80dp</dimen>
+    <dimen name="dimen_14sp">14sp</dimen>
+    <dimen name="dimen_12dp">12dp</dimen>
+    <dimen name="dimen_5dp">5dp</dimen>
+    <dimen name="dimen_85dp">85dp</dimen>
+    <dimen name="dimen_40dp">40dp</dimen>
+    <dimen name="dimen_16sp">16sp</dimen>
+    <dimen name="dimen_65dp">65dp</dimen>
+    <dimen name="dimen_70dp">70dp</dimen>
+    <dimen name="dimen_8dp">8dp</dimen>
+    <dimen name="dimen_17sp">17sp</dimen>
+    <dimen name="dimen_22sp">22sp</dimen>
+    <dimen name="dimen_7dp">7dp</dimen>
+    <dimen name="dimen_24sp">24sp</dimen>
+    <dimen name="dimen_16dp">16dp</dimen>
+    <dimen name="dimen_60dp">60dp</dimen>
+    <dimen name="txt18">18sp</dimen>
+    <dimen name="txt17">17sp</dimen>
+    <dimen name="txt13">13sp</dimen>
+
+
+
+</resources>

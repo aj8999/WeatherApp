@@ -1,3 +1,24 @@
 <resources>
-    <string name="app_name">WheatherApp</string>
+    <string name="app_name">Weather Forecast App</string>
+    <string name="txt_date">Date :</string>
+    <string name="txt_tomarrow_weather">Tomorrow\'s weather</string>
+    <string name="txt_weather_third_day">Weather for the third day</string>
+    <string name="txt_weather_fourth_day">Weather for the fourth day</string>
+    <string name="txt_weather_fifth_day">Weather for the fifth day</string>
+    <string name="txt_minmax">Minimum</string>
+
+    <string name="today_s_weather">Today\'s Weather</string>
+    <string name="title_activity_select_maps">SelectMapsActivity</string>
+    <string name="confirm_location">Confirm Location</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="bookmarked_locations">Bookmarked Locations</string>
+    <string name="AlertMessage">Are you sure do you want to remove this location from bookmarked list ?</string>
+    <string name="nointernet">NO Internet Connection</string>
+    <string name="add_city">+ Add City / Location</string>
+    <string name="_2nd_day_forecast">2nd Day Forecast</string>
+    <string name="_3rd_day_forecast">3rd Day Forecast</string>
+    <string name="_4th_day_forecast">4th Day Forecast</string>
+    <string name="_5th_day_forecast">5th Day Forecast</string>
+
 </resources>

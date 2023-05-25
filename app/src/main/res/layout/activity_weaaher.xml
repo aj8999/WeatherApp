@@ -1,0 +1,710 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/weablue"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+
+    <androidx.core.widget.NestedScrollView
+        android:background="@drawable/weathergredient"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin20">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/TodaysWeater"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="50dp"
+                        android:layout_toStartOf="@+id/tvWeatherNewModifiedTodayDate"
+                        android:textColor="@color/white"
+                        android:textSize="19dp"
+                        android:visibility="gone" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvWeatherNewModifiedTodayDate"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="8dp"
+                        android:layout_marginEnd="10dp"
+
+                        android:textColor="@color/white"
+                        android:textSize="18dp"
+                        android:textStyle="bold" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvCurrentLocation"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvWeatherNewModifiedTodayDate"
+                        android:layout_marginLeft="28dp"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginRight="28dp"
+                        android:gravity="center"
+
+                        android:textColor="@color/white"
+                        android:textSize="15sp" />
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tvTemp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCurrentLocation"
+                        android:layout_marginStart="@dimen/dimen_25dp"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:textColor="@color/white"
+                        android:textSize="75dp"
+                        android:textStyle="bold" />
+
+
+
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15sp"
+                    android:layout_marginTop="15dp"
+                    android:layout_marginEnd="@dimen/dimen_15sp"
+                    android:background="@drawable/weathergredient"
+                    android:orientation="vertical">
+
+                    <androidx.appcompat.widget.AppCompatTextView
+                        android:id="@+id/tWeatherNewModifiedTodaysTempTitle"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/tvCurrentLocation"
+                        android:layout_marginTop="15dp"
+                        android:gravity="center"
+                        android:text="Today's Weather"
+                        android:textColor="@color/white"
+                        android:textSize="16dp" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:id="@+id/tvTempTittle"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textAlignment="center"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/dimen35"
+                            android:textStyle="bold" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+
+                        android:id="@+id/rlWeatherNewModified2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@+id/rlWeatherNewModified"
+                        android:layout_marginStart="@dimen/dimen_15sp"
+                        android:layout_marginTop="@dimen/dimen_15sp"
+                        android:layout_marginEnd="@dimen/dimen_15sp"
+                        android:layout_marginBottom="15dp"
+                        android:gravity="center_horizontal"
+                        android:padding="5dp">
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal">
+
+                            <LinearLayout
+                                android:id="@+id/ll1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:id="@+id/iv1"
+                                        android:layout_width="@dimen/weathericon"
+                                        android:layout_height="@dimen/weathericon"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/ic_temperature"
+                                        app:tint="@color/white" />
+                                    <!--for min max temp-->
+                                    <LinearLayout
+                                        android:id="@+id/llWeatherNewModifiedMinMaxTemp"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:layout_toEndOf="@+id/iv1"
+                                        android:orientation="vertical"
+                                        android:weightSum="6">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_weight="3">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvWeatherNewModifiedMinMaxTitle"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="8dp"
+                                                android:text="Min max Temp"
+                                                android:textColor="@color/white"
+                                                android:textSize="14sp" />
+
+                                            <!--                                    <androidx.appcompat.widget.AppCompatTextView-->
+                                            <!--                                        android:layout_width="wrap_content"-->
+                                            <!--                                        android:layout_height="wrap_content"-->
+                                            <!--                                        android:layout_alignParentEnd="true"-->
+                                            <!--                                        android:text="@string/txt_colon"-->
+                                            <!--                                        android:textColor="@color/white"-->
+                                            <!--                                        android:textSize="16dp"-->
+                                            <!--                                        android:textStyle="bold" />-->
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_weight="3">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvMinmax"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Min max Temp"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold" />
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </RelativeLayout>
+                                <!--for humidity-->
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:id="@+id/iv2"
+                                        android:layout_width="@dimen/weathericon"
+                                        android:layout_height="@dimen/weathericon"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/ic_humidity"
+                                        app:tint="@color/white" />
+
+                                    <LinearLayout
+                                        android:id="@+id/llWeatherNewModifiedHumidity"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_toEndOf="@+id/iv2"
+                                        android:orientation="vertical"
+                                        android:weightSum="6">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+
+                                            android:layout_weight="3">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvWeatherNewModifiedHumidityTitle"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="8dp"
+                                                android:text="Humidity"
+                                                android:textColor="@color/white"
+                                                android:textSize="14sp" />
+
+                                            <!--  <androidx.appcompat.widget.AppCompatTextView
+                                                  android:layout_width="wrap_content"
+                                                  android:layout_height="wrap_content"
+                                                  android:layout_alignParentEnd="true"
+                                                  android:text="@string/txt_colon"
+                                                  android:textColor="@color/white"
+                                                  android:textSize="16dp"
+                                                  android:textStyle="bold" />-->
+
+                                        </RelativeLayout>
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_weight="3">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvHumidity"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Humidity"
+                                                android:textColor="@color/white"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />
+
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+                                </RelativeLayout>
+                            </LinearLayout>
+                            <!--for wind power-->
+                            <LinearLayout
+                                android:id="@+id/ll2"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_below="@+id/ll1"
+                                android:layout_marginTop="@dimen/margin10"
+                                android:orientation="horizontal"
+                                android:weightSum="2">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:id="@+id/iv3"
+                                        android:layout_width="19dp"
+                                        android:layout_height="21dp"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/ic_wind"
+                                        app:tint="@color/white" />
+
+                                    <LinearLayout
+                                        android:id="@+id/llWeatherNewModifiedWindPower"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_toEndOf="@+id/iv3"
+                                        android:orientation="vertical"
+                                        android:weightSum="6">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_weight="3">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvWeatherNewModifiedWindPowerTitle"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="8dp"
+                                                android:text="Wind Speed"
+                                                android:textColor="@color/white"
+                                                android:textSize="14sp" />
+
+                                            <!--<androidx.appcompat.widget.AppCompatTextView
+                                                android:layout_width="wrap_content"
+                                                android:layout_height="wrap_content"
+                                                android:layout_alignParentEnd="true"
+                                                android:text="@string/txt_colon"
+                                                android:textColor="@color/white"
+                                                android:textSize="16dp"
+                                                android:textStyle="bold" />-->
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_weight="3">
+
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvWind"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Wind Speed"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold" />
+
+
+                                        </RelativeLayout>
+
+
+                                    </LinearLayout>
+                                </RelativeLayout>
+                                <!--for pressure-->
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginLeft="11dp"
+                                    android:layout_weight="1">
+
+                                    <ImageView
+                                        android:id="@+id/iv4"
+                                        android:layout_width="@dimen/weathericon"
+                                        android:layout_height="@dimen/weathericon"
+                                        android:layout_marginTop="5dp"
+                                        android:src="@drawable/ic_air"
+                                        app:tint="@color/white" />
+
+                                    <LinearLayout
+                                        android:id="@+id/llWeatherNewPressure"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:layout_marginTop="5dp"
+                                        android:layout_toEndOf="@+id/iv4"
+                                        android:orientation="vertical"
+                                        android:weightSum="6">
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+
+                                            android:layout_weight="3">
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvWeatherNewModifiedPressureWindPowerTitle"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:layout_marginEnd="8dp"
+                                                android:text="Pressure"
+                                                android:textColor="@color/white"
+                                                android:textSize="14sp" />
+
+                                            <!--                                    <androidx.appcompat.widget.AppCompatTextView-->
+                                            <!--                                        android:layout_width="wrap_content"-->
+                                            <!--                                        android:layout_height="wrap_content"-->
+                                            <!--                                        android:layout_alignParentEnd="true"-->
+                                            <!--                                        android:text="@string/txt_colon"-->
+                                            <!--                                        android:textColor="@color/white"-->
+                                            <!--                                        android:textSize="16dp"-->
+                                            <!--                                        android:textStyle="bold" />-->
+
+
+                                        </RelativeLayout>
+
+
+                                        <RelativeLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:layout_marginStart="8dp"
+                                            android:layout_weight="3">
+
+
+                                            <androidx.appcompat.widget.AppCompatTextView
+                                                android:id="@+id/tvPressure"
+                                                android:layout_width="match_parent"
+                                                android:layout_height="wrap_content"
+                                                android:text="Pressure"
+                                                android:textColor="@color/white"
+                                                android:textSize="15sp"
+                                                android:textStyle="bold" />
+
+
+                                        </RelativeLayout>
+                                    </LinearLayout>
+
+
+                                </RelativeLayout>
+                            </LinearLayout>
+                        </RelativeLayout>
+                    </RelativeLayout>
+                </LinearLayout>
+
+                <View
+                    android:id="@+id/viewWeatherNewModified"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:layout_below="@+id/rlWeatherNewModified2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="24dp"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/circleshape1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15sp"
+                    android:layout_marginTop="@dimen/dimen_15sp"
+                    android:layout_marginEnd="@dimen/dimen_15sp"
+                    android:background="@drawable/weathergredient"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_25dp"
+                            android:layout_marginTop="@dimen/dimen_25dp"
+                            android:text="@string/_2nd_day_forecast"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSecandDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/dimen_25dp"
+                            android:layout_marginTop="@dimen/dimen_25dp"
+                            
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvHour"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:layout_below="@+id/rlWeatherNewModified2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/circleshape1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15sp"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="@dimen/dimen_15sp"
+                    android:background="@drawable/weathergredient"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_25dp"
+                            android:layout_marginTop="@dimen/dimen_25dp"
+                            android:text="@string/_3rd_day_forecast"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvThirdDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/dimen_25dp"
+                            android:layout_marginTop="@dimen/dimen_25dp"
+                            
+                            android:textColor="@color/white"
+                            android:layout_marginEnd="10dp"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvDAYYY"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+
+                <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:layout_below="@+id/rlWeatherNewModified2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/circleshape1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15sp"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="@dimen/dimen_15sp"
+                    android:background="@drawable/weathergredient"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_25dp"
+                            android:layout_marginTop="@dimen/dimen_25dp"
+                            android:text="@string/_4th_day_forecast"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tvFourthdDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/dimen_25dp"
+                            android:layout_marginTop="@dimen/dimen_25dp"
+                            
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvFourth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>  <View
+
+                    android:layout_width="match_parent"
+                    android:layout_height="0.75dp"
+                    android:layout_below="@+id/rlWeatherNewModified2"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="20dp"
+                    android:background="@drawable/circleshape1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dimen_15sp"
+                    android:layout_marginTop="@dimen/margin10"
+                    android:layout_marginEnd="@dimen/dimen_15sp"
+                    android:background="@drawable/weathergredient"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dimen_25dp"
+                            android:layout_marginTop="@dimen/dimen_25dp"
+                            android:text="@string/_5th_day_forecast"
+                            android:textColor="@color/white"
+                            android:textSize="18sp"
+                            android:textStyle="bold" />
+                        <TextView
+                            android:id="@+id/tvFifthdDate"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginStart="@dimen/dimen_25dp"
+                            android:layout_marginTop="@dimen/dimen_25dp"
+                            android:layout_marginEnd="10dp"
+                            android:textColor="@color/white"
+                            android:textSize="15sp"
+                            android:textStyle="normal" />
+
+                    </RelativeLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="15dp"
+                        android:layout_marginTop="4dp"
+                        android:layout_marginEnd="15dp"
+                        android:layout_marginBottom="20dp"
+                        android:orientation="vertical">
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/rvFifth"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content" />
+                    </LinearLayout>
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</RelativeLayout>

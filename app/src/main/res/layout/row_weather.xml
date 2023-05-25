@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="125dp"
+    android:layout_marginStart="@dimen/dimen10"
+    android:layout_marginTop="@dimen/dimen10"
+    android:layout_height="wrap_content"
+    android:background="@drawable/weathergredient">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:id="@+id/llWeatherSecondDayAdapter"
+        android:layout_height="wrap_content">
+
+        <!--for order id-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="@dimen/dimen_80dp"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvWeatherSecondDayAdapterTime"
+                android:textSize="@dimen/txt13"
+                android:layout_marginTop="@dimen/margin_small"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            />
+
+
+
+
+
+        <View
+            android:visibility="gone"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            />
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvWeatherSecondDayAdapterTemp"
+                android:textSize="@dimen/txt13"
+                android:textAllCaps="true"
+                android:gravity="center"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                />
+
+        </LinearLayout>
+        <View
+            android:visibility="gone"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_marginTop="@dimen/margin_small"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/margin_small"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatTextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/tvWeatherSecondDayAdapterDescription"
+                android:textSize="@dimen/txt_size_small"
+                android:textAllCaps="true"
+                android:layout_marginBottom="12dp"
+                android:textAlignment="center"
+                android:textColor="@color/white"
+                 />
+
+        </LinearLayout>
+
+        <!--<View-->
+        <!--android:layout_width="1dp"-->
+        <!--android:layout_height="match_parent"-->
+        <!--android:background="@color/gray" />-->
+
+
+
+        <!--for order id-->
+
+
+
+    </LinearLayout>
+
+
+
+
+</RelativeLayout>

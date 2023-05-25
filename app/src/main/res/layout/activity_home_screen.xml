@@ -6,11 +6,13 @@
     android:layout_height="match_parent"
     tools:context=".HomeScreenActivity">
 
+
 <RelativeLayout
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_above="@+id/nav_view"
-    android:id="@+id/rlContainer"/>
+    android:id="@+id/rlContainer"
+    android:layout_marginBottom="7dp"/>
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/nav_view"
         android:layout_width="match_parent"
